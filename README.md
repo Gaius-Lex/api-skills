@@ -1,5 +1,10 @@
 # Skille Gaius-Lex API
 
+## Api-Key
+Aby otrzymać Api-Key, należy skontaktować się z zespołem Gaius-Lex pod adresem kontakt at gaius-lex.pl.
+
+## Katalog skilli
+
 Ten katalog to **gotowe opisy** poszczególnych obszarów [API Gaius-Lex](https://api.gaius-lex.pl): jakie są endpointy, parametry, autoryzacja i typowe sposoby użycia. Możesz z nich korzystać **samodzielnie** (czytasz pliki `SKILL.md`) albo **w Cursorze** — wtedy asystent ma kontekst przy pisaniu integracji.
 
 **Formalna specyfikacja:** [Gaius-Lex API 2.0 (OpenAPI)](https://openapi.echoapi.com/swagger/v3/5f57a7697802000?locale=en)  
