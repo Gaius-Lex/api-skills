@@ -18,9 +18,8 @@ description: Index of Gaius-Lex HTTP API Cursor skills (OpenAPI-backed). Use whe
 | [gaius-api-doc-verification](../gaius-api-doc-verification/SKILL.md) | Doc verification (poll) |
 | [gaius-api-abusivity](../gaius-api-abusivity/SKILL.md) | Abusivity (BETA) |
 | [gaius-api-theses](../gaius-api-theses/SKILL.md) | Theses analysis (BETA) |
-| [gaius-api-alignment](../gaius-api-alignment/SKILL.md) | Alignment / compliance (BETA) |
 | [gaius-api-rule-analysis](../gaius-api-rule-analysis/SKILL.md) | Rule analysis (BETA) |
 | [gaius-api-krs](../gaius-api-krs/SKILL.md) | KRS endpoints (BETA) |
 | [gaius-api-core-api-key](../gaius-api-core-api-key/SKILL.md) | `POST /core_api/api-key/create` |
 
-Canonical location for these files: `legalgpt-django/.cursor/skills/`.
+**Package root:** this directory tree (the published skills repo). Optional **Kod** paths in each skill point at the internal Gaius-Lex backend codebase—not required for HTTP integration.
