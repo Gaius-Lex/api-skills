@@ -22,9 +22,9 @@ Ten katalog to **gotowe opisy** poszczególnych obszarów [API Gaius-Lex](https:
 
 | Chcę… | Skill |
 |--------|--------|
+| Zadać **złożone pytanie prawne** z narzędziami i źródłami (asynchronicznie) | [`gaius-api-agent`](gaius-api-agent/SKILL.md) |
 | Znaleźć akt lub orzeczenie po tytule / sygnaturze, potem pobrać **pełny tekst** z bazy | [`gaius-api-search`](gaius-api-search/SKILL.md) (`/search` → `gLexID` → `/document-glexid`) |
 | **Wgrać plik** (PDF, TXT, DOCX…), potem **odczytać treść** lub znaleźć frazę we wgranych dokumentach | [`gaius-api-files`](gaius-api-files/SKILL.md) |
-| Zadać **złożone pytanie prawne** z narzędziami i źródłami (asynchronicznie) | [`gaius-api-agent`](gaius-api-agent/SKILL.md) |
 | Dostać **jedną odpowiedź** na pytanie (research, bez pełnego agenta) | [`gaius-api-answer`](gaius-api-answer/SKILL.md) |
 | Przetworzyć skan **OCR** (obraz/PDF → tekst) | [`gaius-api-ocr`](gaius-api-ocr/SKILL.md) |
 | Sprawdzić **KRS** (powiązania, zarząd, umowa spółki) | [`gaius-api-krs`](gaius-api-krs/SKILL.md) |
