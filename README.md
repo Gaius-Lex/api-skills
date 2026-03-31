@@ -30,6 +30,7 @@ Ten katalog to **gotowe opisy** poszczególnych obszarów [API Gaius-Lex](https:
 | Zadać **złożone pytanie prawne** z narzędziami i źródłami (asynchronicznie) | [`gaius-api-agent`](gaius-api-agent/SKILL.md) |
 | Znaleźć akt lub orzeczenie po tytule / sygnaturze, potem pobrać **pełny tekst** z bazy | [`gaius-api-search`](gaius-api-search/SKILL.md) (`/search` → `gLexID` → `/document-glexid`) |
 | **Wgrać plik** (PDF, TXT, DOCX…), potem **odczytać treść** lub znaleźć frazę we wgranych dokumentach | [`gaius-api-files`](gaius-api-files/SKILL.md) |
+| **Semantycznie zapytać** (`query-documents`) albo **wyszukać frazę w jednym pliku** (`document-search`); typowy flow **po** uploadzie API (`external/vectorize`, np. OCR `*.txt`) — opis w obu skillach | [`gaius-api-files`](gaius-api-files/SKILL.md), [`gaius-api-query-documents`](gaius-api-query-documents/SKILL.md) |
 | Dostać **jedną odpowiedź** na pytanie (research, bez pełnego agenta) | [`gaius-api-answer`](gaius-api-answer/SKILL.md) |
 | Przetworzyć skan **OCR** (obraz/PDF → tekst) | [`gaius-api-ocr`](gaius-api-ocr/SKILL.md) |
 | Sprawdzić **KRS** (powiązania, zarząd, umowa spółki) | [`gaius-api-krs`](gaius-api-krs/SKILL.md) |
@@ -49,6 +50,7 @@ Jeśli pracujesz w **Cursorze**, możesz podpiąć ten folder jako [skills](http
 | [gaius-api-agent](gaius-api-agent/SKILL.md) | Agent, profile, polling |
 | [gaius-api-search](gaius-api-search/SKILL.md) | Wyszukiwanie, źródła, dokument po `gLexID` |
 | [gaius-api-files](gaius-api-files/SKILL.md) | Pliki `external`, lista, treść po `fileId` |
+| [gaius-api-query-documents](gaius-api-query-documents/SKILL.md) | `query-documents`, `document-search` (Mój dysk / `external` + Api-Key) |
 | [gaius-api-answer](gaius-api-answer/SKILL.md) | Answer API |
 | [gaius-api-ocr](gaius-api-ocr/SKILL.md) | OCR |
 | [gaius-api-anonymization](gaius-api-anonymization/SKILL.md) | Anonimizacja |

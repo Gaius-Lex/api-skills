@@ -42,7 +42,18 @@ Tylko dokumenty z `VectorizationStatus.is_api=True`. Odpowiedź: `{ "documents":
 2. Dla podejrzanych pozycji (albo po kolei, jeśli lista jest krótka): **`GET /api/v1/external/document/<file_id>`** — przeszukaj po stronie klienta pole **`content`** (np. szukaj frazy, regex).
 3. Jeśli `409`, odczekaj i powtórz (treść jeszcze nie zapisana po wektoryzacji).
 
-**Uwaga:** To dotyczy **uploadów API** (`external`). Inne ścieżki („Mój dysk” z UI, współdzielone katalogi) nie są tym samym endpointem — tam typowe jest np. `POST /api/v1/query-documents` (sesja), a nie ten skill.
+**Uwaga:** To dotyczy **uploadów API** (`external`). Inne ścieżki („Mój dysk” z UI, współdzielone katalogi) nie są tym samym endpointem.
+
+**Przeszukiwanie** (semantyczne / w jednym pliku) z **`Api-Key`**: [gaius-api-query-documents](../gaius-api-query-documents/SKILL.md).
+
+### Use case: upload pliku → RAG (`query-documents`) i fraza w jednym pliku (`document-search`)
+
+**Cel:** Wgrać dokument (np. OCR `*.txt`), odczekać gotowość treści / wektorów, potem zapytać semantycznie po całym `external/` albo wyszukać frazę w konkretnym pliku.
+
+1. **`POST /api/v1/external/vectorize`** — `multipart/form-data`, pole `file` (np. `10514.ocr.txt`). Odpowiedź: `path` (np. `external/10514.ocr.txt`), `fileId`.
+2. Opcjonalnie **`GET /api/v1/external/document/<file_id>`** — jeśli `409`, powtarzaj aż `200` (treść zapisana po wektoryzacji); przy krótkich plikach często od razu `200`.
+3. **`GET /api/v1/external/list-documents`** — potwierdzenie `path` / statusu wektoryzacji.
+4. Dalej wyłącznie **`Api-Key`**: semantyka **`POST /api/v1/query-documents`** z `path: "external/"` (lub węższy prefiks) oraz szukanie frazy **`GET /api/v1/document-search?query=...&path=external/<nazwa_pliku>`** — szczegóły i ograniczenia: [gaius-api-query-documents](../gaius-api-query-documents/SKILL.md).
 
 ## Kod
 
